@@ -1,137 +1,158 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+
+:root {
+  --font-family: 'Roboto', sans-serif;
+  --box-shadow: rgba(126, 84, 71, 0.2) 0px 7px 29px 0px;
+  --dark: #161414;
+  --light-orange: #3b84863f;
+}
 
 * {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.container {
-    height: 130vh;
-    display: flex;
-    justify-content: center; /* horizontal */
-    align-items: center; /* vertical */
+body {
+  font-family: var(--font-family);
+  background: lightgray;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
 }
 
 
-.form-contact-me {
-    /* border-style: solid; */
-    width: 400px
-}
-
-/* .label-input {
-    font-size: 20px;
-    font-weight: bold;
-} */
-
-.form-contact-me div {
-    margin-bottom: 20px;
-}
-
-.form-contact-me div label {
-    font-size: 20px;
-    font-weight: bold;
-}
-
-.form-contact-me div input,select, textarea {
-    width: 100%;
-    margin-top: 5px;
-    background-color: rgb(220, 220, 220);
-    border-radius: 5px;
-    border-style: solid;
-    border-color: gray;
-    padding: 10px;
-    resize: none;
-}
-
-.form-contact-me button {
-    background-color: rgb(27, 37, 68);
-    color: white;
-    font-size: 16px;
-    padding: 7px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-left: 75%;
-}
-
-.form-contact-me button:hover {
-    background-color: rgb(176, 47, 0);
-}
-
-/* ==== Akhir Form Contact Me ==== */
-
-/* ==== Main Page ==== */
-.wrapper {
-    width: 55%;
-    padding: 10;
-    display: flex;
-}
-
-.wrapper .right-side {
-    flex: 60%;
-    padding-right: 40px;
-
-}
-
-.wrapper .right-side .main {
-    display: flex;
-    margin-bottom: 20px;
-}
-
-.wrapper .right-side .skill {
-    display: flex;
-    margin-top: 40px;
-    margin-bottom: 20px;
-}
-
-.wrapper .right-side .contact a {
-    display:flex;
-    color :white;
-    background-color: rgb(27, 23, 21);
-    padding: 5px 15px;
-    border-radius: 10px;
-    margin-right: 30px;
-    margin-bottom: 60px;
-}
-
-.wrapper .right-side .item {
-    padding: 5px 10px;
-    border-radius: 10px;
-    margin-right: 0px;
-}
-
-.wrapper .right-side .download img{
-    padding: 5px 0px;
-    border-radius: 10px;
-    width: 35px;
-}
-
-.wrapper .right-side p {
-    color: gray;
+.item{
+    margin-bottom: 30px;
     text-align: justify;
 }
 
-.wrapper .right-side .sosmed{
-    font-size: 30px;
+p {
+  font-weight: 300;
+  font-size: 0.9rem;
+  text-align: justify;
 }
 
-.wrapper .right-side .sosmed .sosmed-wrapper {
-    display: flex;
+.card {
+  box-shadow: var(--box-shadow);
+  border-radius: 0.5rem;
+  background: white;
 }
 
-.wrapper .right-side .sosmed .sosmed-wrapper a {
-    color: black;
+.container {
+  margin: 3rem 5rem;
+  padding: 2rem 0;
+  background: white;
+  border-radius:10px;
 }
 
-.wrapper .right-side .sosmed .icon {
+.content {
+  margin: 0 auto;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  color: var(--dark);
+  margin-bottom:15px; 
+
+}
+
+.content > p {
+  margin: 1rem 0;
+}
+
+.contact {
+  padding: 0.5rem 1rem;
+  width: fit-content;
+  transition: all 300ms;
+}
+
+.contact {
+  border-radius: 2rem;
+  background: var(--dark);
+  color: whitesmoke;
+  margin-bottom: 0.5rem;
+}
+
+.contact:hover {
+  background: var(--dark-orange);
+}
+
+.ref {
+  display: flex;
+  align-items: flex-start;
+  width: 500px;  
+}
+.download {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  color: var(--dark);
+  width: 500px;
+  padding: 0.5rem 1rem;
+  transition: all 300ms;
+  width: fit-content;
+}
+
+.download a{
+  display: flex;
+  width: 500px;
+}
+
+.sosmed {
+  display: flex;
+  gap: 0.3rem;
+  margin: 1.5rem 0 2rem;
+  width: 250px;
+  font-size: 30px;
+}
+
+.sosmed .icon {
     border: 1px solid black;
-    border-radius: 50%;
+    border-radius: 100%;
     width: 50px;
     height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 40px;
+    margin-right: 10px;
 }
 
-/* ==== Akhir Main Page ==== */
+.social-media img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+
+figure {
+  width: 250px;
+}
+
+.profile-picture {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+figcaption {
+  text-align: center;
+  padding: 0.7rem 0;
+  color: var(--dark);
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.125rem;
+}
+
+figcaption > p {
+  text-align: center;
+}
